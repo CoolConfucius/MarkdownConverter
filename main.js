@@ -7,7 +7,6 @@ var main = {
 
   render: function(){
     var text = $('#markdown').val();
-    console.log('text', text);
     if (!text) {
       alert("It's empty!");
       return; 
@@ -15,10 +14,7 @@ var main = {
     
     $.post('/render', { input: text})
     .success(function(data) {
-      $('#rendered').empty(); 
-      var $dom = data; 
-      $dom.addClass('converted');
-      $('#rendered').append($.parseHTML($dom) );
+      $('#rendered').append(data);
     })
     .fail(function(err) {
       alert('something went wrong :(')
