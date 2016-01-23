@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Markeddown</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    #rendered {
+      border: 3px solid;
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <div class="jumbotron text-center">
+    <h1>Markdown Converter</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">
+        <textarea rows="4" cols="50" type="text" id="markdown"></textarea>
+      </div>
+      <div id="rendered" class="col-xs-5 col-sm-offset-1"></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-success btn-lg" id="convert">Go!</button>
+      <button class="btn btn-danger btn-lg" id="clean">Clean</button>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
